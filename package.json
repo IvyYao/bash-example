@@ -1,0 +1,9 @@
+{
+  "name": "example",
+  "description": "example",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {}
+}
