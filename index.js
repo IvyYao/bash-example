@@ -29,12 +29,9 @@ const miniProgram = automator
     await pdp.waitFor ('.pdp-book-button');
     const pdpBookButton = await pdp.$ ('.pdp-book-button');
     const buttonFormButtonView = await pdpBookButton.$ ('form button view');
-    //await pdp.waitFor (2000);
-    console.log ('这是pdp4：', await buttonFormButtonView.text ());
-    console.log (await buttonFormButtonView.wxml ());
-    console.log (await buttonFormButtonView.outerWxml ());
-    //await pdpBookButton.trigger ('press');
-    await page.screenshot ({path: 'screenshot.png'});
-
-    //await miniProgram.close ();
+    await pdp.waitFor (2000);
+    await buttonFormButtonView.tap ();
+    const p4 = await miniProgram.currentPage ();
+    await p4.waitFor (8000);
+    await miniProgram.close ();
   });
