@@ -1,5 +1,5 @@
 const automator = require ('miniprogram-automator');
-
+console.log ('test ci hook');
 const miniProgram = automator
   .launch ({
     cliPath: '/Applications/wechatwebdevtools.app/Contents/MacOS/cli', // 工具 cli 位置，如果你没有更改过默认安装位置，可以忽略此项
